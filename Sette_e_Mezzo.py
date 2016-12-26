@@ -141,7 +141,7 @@ class Agent():
 
         print ('State-Action Value Table \n')
         print ('Reward is +1 if player wins, -1 if player loses \n')
-        print ('__ Value_Hit___Stand')            
+        print ('__ Score_Hit___Stand')            
         print (formattedResult)
         
         
