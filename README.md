@@ -3,7 +3,7 @@
 
 For most Italian families, Christmas typically involves lots of hours of "Sette e Mezzo" playing.   
 
-Here is a tentative, conservative, GTO solution to the game from the non-dealer perspective, expressed by the resulting State-Action Value Table. Reward is `+1` if player wins, `-1` if player loses.  
+Here is a conservative, GTO solution to the game from the non-dealer perspective, expressed by the resulting State-Action Value Table. Reward is `+1` if player wins, `-1` if player loses.  
 
 ```sh
 _ Value_Hit___Stand
@@ -24,7 +24,7 @@ _ Value_Hit___Stand
  [ 7.5  -1.    0.77]]
 ```
 
-Effectively, the GTO strategy consists of betting the maximum (then standing) when a 7 is dealt as first card, and betting the minimum (then damage controlling) in all other initial states.   
+Effectively, the GTO strategy consists of betting the maximum (then standing) when a `7` is dealt as first card, and betting the minimum (then damage controlling) in all other initial states.   
 To reproduce the result, just download the code and run it. It takes about 2 mins. 
 
 ### Requirements
