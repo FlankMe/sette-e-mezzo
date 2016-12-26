@@ -90,9 +90,9 @@ class Agent():
 
         # Initialization of useful variables and constants
         self._GAMMA = 1.0
-        self._ALPHA = 0.05
+        self._ALPHA = 0.01
         self._INITIAL_STATE_VALUE = 1.0
-        self._EPSILON = 0.1
+        self._EPSILON = 0.5
         self.maxValue = maxValue
         self.Delta = Delta
         
