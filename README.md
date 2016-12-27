@@ -1,9 +1,10 @@
 # Sette e Mezzo
-**TD method solves a simplified version of the card game [Sette e Mezzo][1]**  
+**Solution for a simplified version of the card game [Sette e Mezzo][1]**    
 
 For most Italian families, Christmas typically involves lots of hours of "Sette e Mezzo" playing.   
+Here is a GTO solution to the game from the non-dealer perspective, expressed by the resulting State-Action Value Table.  
 
-Here is a conservative, GTO solution to the game from the non-dealer perspective, expressed by the resulting State-Action Value Table. Reward is `+1` if player wins, `-1` if player loses.  
+This simulation makes the conservative assumption that the dealer has perfect knowledge of the final score of the player, whereas in reality there is a margin of uncertainty. Reward is `+1` if player wins, `-1` if player loses. 
 
 ```sh
 _ Score_Hit___Stand
@@ -23,7 +24,7 @@ _ Score_Hit___Stand
  [ 7.   -0.5   0.4 ]
  [ 7.5  -1.    0.71]]
 ```
-Note the table is somewhat inconsistent though: the pair (2.0, Stand) should be less or equal to (2.5, Stand). It is important to stress that the above is just an approximation. The above estimates will converge to their true value as the number of simulated episodes tends to infinity.  
+Notice the table is just an approximation and ended up being somewhat inconsistent: the pair (2.0, Stand) should be less or equal to (2.5, Stand). The above estimates will converge to their true value as the number of simulated episodes grows.  
 
 **In summary, the GTO strategy consists of betting the maximum (then standing) when a `7` is dealt as first card, and betting the minimum (then damage controlling) in all other initial states.**   
 To reproduce the result, just download the code and run it. It takes about 2 mins. 
